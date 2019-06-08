@@ -1,0 +1,72 @@
+#include <stdio.h>
+
+//Global variables
+int globalI = 5;
+float globalF = 2.5;
+char globalC = 'Jon';
+
+
+
+void function1()
+{
+    int localI = 6;
+    float localF = 2.6;
+    char localC = 'Jona';
+    
+    printf("The memory address for the local variable of type integer is: %p\n", &localI);
+    printf("The memory address for the local variable of type float is: %p\n", &localF);
+    printf("The memory address for the local variable of type char is: %p\n", &localC);
+}
+
+void function2()
+{
+	static int localSI = 7;
+	static float localSF = 2.7;
+	static char localSC = 'Jonat';
+	
+	printf("The memory address for the static local variable of type integer is: %p\n", &localSI);
+    printf("The memory address for the static local variable of type float is: %p\n", &localSF);
+    printf("The memory address for the static local variable of type char is: %p\n", &localSC);
+}
+
+void function3(int pI, float pF, char pC)
+{
+	printf("The memory address for the parameter variable of type integer is: %p\n", &pI);
+    printf("The memory address for the parameter variable of type float is: %p\n", &pF);
+    printf("The memory address for the parameter variable of type char is: %p\n", &pC);
+}
+
+void function4()
+{
+	printf("The memory address for the global variable of type integer is: %p\n", &globalI);
+    printf("The memory address for the global variable of type float is: %p\n", &globalF);
+    printf("The memory address for the global variable of type char is: %p\n", &globalC);
+}
+
+void function5()
+{
+
+	int dynamicI = 9;
+	float dynamicF = 2.9;
+	char dynamicC = 'Jonatha';
+	
+	ptrI = (int*) malloc(1 * sizeof(int));
+	ptrF = (float*) malloc(1 * sizeof(float));
+	ptrC = (char*) malloc(1 * sizeof(char));
+
+	
+
+
+}
+
+
+int main()
+{
+
+    function1();
+    function2();
+    function3(8, 2.8, 'Jonath');
+    function4();
+    ... .. ...
+    ... .. ...
+}
